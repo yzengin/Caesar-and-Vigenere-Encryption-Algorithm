@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaesarEncryptionMain">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="35dp"
+                android:layout_toEndOf="@+id/encryptionBtn"
+                android:gravity="center"
+                android:text="Caesar Encryption"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/keyInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="58dp"
+                android:ems="10"
+                android:hint="Anahtar Giriniz"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="75dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <EditText
+                android:id="@+id/newKeyInputCaesar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="58dp"
+                android:ems="10"
+                android:hint="Eski Anahtarı Gir"
+                android:inputType="number"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="75dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <EditText
+                android:id="@+id/textInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keyInput"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="57dp"
+                android:ems="10"
+                android:hint="Şifrelenecek Metni Giriniz"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="75dp"
+                tools:layout_editor_absoluteY="89dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/encryptionBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textInput"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Metni Şifrele" />
+
+                <Button
+                    android:id="@+id/decodeBtn"
+                    android:layout_width="119dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textInput"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/encryptionBtn"
+                    android:layout_toRightOf="@+id/encryptionBtn"
+                    android:text="Şifreyi Çöz" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/encryptionBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="Şifreli Metin"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/encryptedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="127dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="124dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/encryptedText"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="Çözülen Metin"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/decodedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="117dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="115dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
